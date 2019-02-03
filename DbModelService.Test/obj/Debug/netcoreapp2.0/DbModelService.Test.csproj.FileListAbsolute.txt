@@ -1,0 +1,15 @@
+C:\Users\kunal\source\repos\ImdbClone\DbModelService.Test\bin\Debug\netcoreapp2.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\Users\kunal\source\repos\ImdbClone\DbModelService.Test\bin\Debug\netcoreapp2.0\xunit.runner.reporters.netcoreapp10.dll
+C:\Users\kunal\source\repos\ImdbClone\DbModelService.Test\bin\Debug\netcoreapp2.0\xunit.runner.utility.netcoreapp10.dll
+C:\Users\kunal\source\repos\ImdbClone\DbModelService.Test\bin\Debug\netcoreapp2.0\TechTalk.SpecFlow.xUnit.SpecFlowPlugin.dll
+C:\Users\kunal\source\repos\ImdbClone\DbModelService.Test\bin\Debug\netcoreapp2.0\DbModelService.Test.deps.json
+C:\Users\kunal\source\repos\ImdbClone\DbModelService.Test\bin\Debug\netcoreapp2.0\DbModelService.Test.runtimeconfig.json
+C:\Users\kunal\source\repos\ImdbClone\DbModelService.Test\bin\Debug\netcoreapp2.0\DbModelService.Test.runtimeconfig.dev.json
+C:\Users\kunal\source\repos\ImdbClone\DbModelService.Test\bin\Debug\netcoreapp2.0\DbModelService.Test.dll
+C:\Users\kunal\source\repos\ImdbClone\DbModelService.Test\bin\Debug\netcoreapp2.0\DbModelService.Test.pdb
+C:\Users\kunal\source\repos\ImdbClone\DbModelService.Test\obj\Debug\netcoreapp2.0\DbModelService.Test.csprojAssemblyReference.cache
+C:\Users\kunal\source\repos\ImdbClone\DbModelService.Test\obj\Debug\netcoreapp2.0\DbModelService.Test.csproj.CoreCompileInputs.cache
+C:\Users\kunal\source\repos\ImdbClone\DbModelService.Test\obj\Debug\netcoreapp2.0\DbModelService.Test.AssemblyInfoInputs.cache
+C:\Users\kunal\source\repos\ImdbClone\DbModelService.Test\obj\Debug\netcoreapp2.0\DbModelService.Test.AssemblyInfo.cs
+C:\Users\kunal\source\repos\ImdbClone\DbModelService.Test\obj\Debug\netcoreapp2.0\DbModelService.Test.dll
+C:\Users\kunal\source\repos\ImdbClone\DbModelService.Test\obj\Debug\netcoreapp2.0\DbModelService.Test.pdb

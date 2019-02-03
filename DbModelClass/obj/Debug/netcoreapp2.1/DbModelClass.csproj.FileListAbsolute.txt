@@ -1,0 +1,9 @@
+C:\Users\kunal\source\repos\ImdbClone\DbModelClass\bin\Debug\netcoreapp2.1\DbModelClass.deps.json
+C:\Users\kunal\source\repos\ImdbClone\DbModelClass\bin\Debug\netcoreapp2.1\DbModelClass.dll
+C:\Users\kunal\source\repos\ImdbClone\DbModelClass\bin\Debug\netcoreapp2.1\DbModelClass.pdb
+C:\Users\kunal\source\repos\ImdbClone\DbModelClass\obj\Debug\netcoreapp2.1\DbModelClass.csprojAssemblyReference.cache
+C:\Users\kunal\source\repos\ImdbClone\DbModelClass\obj\Debug\netcoreapp2.1\DbModelClass.csproj.CoreCompileInputs.cache
+C:\Users\kunal\source\repos\ImdbClone\DbModelClass\obj\Debug\netcoreapp2.1\DbModelClass.AssemblyInfoInputs.cache
+C:\Users\kunal\source\repos\ImdbClone\DbModelClass\obj\Debug\netcoreapp2.1\DbModelClass.AssemblyInfo.cs
+C:\Users\kunal\source\repos\ImdbClone\DbModelClass\obj\Debug\netcoreapp2.1\DbModelClass.dll
+C:\Users\kunal\source\repos\ImdbClone\DbModelClass\obj\Debug\netcoreapp2.1\DbModelClass.pdb

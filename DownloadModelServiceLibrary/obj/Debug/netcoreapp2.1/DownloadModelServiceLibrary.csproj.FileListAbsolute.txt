@@ -1,0 +1,9 @@
+C:\Users\kunal\source\repos\ImdbClone\DownloadModelServiceLibrary\bin\Debug\netcoreapp2.1\DownloadModelServiceLibrary.deps.json
+C:\Users\kunal\source\repos\ImdbClone\DownloadModelServiceLibrary\bin\Debug\netcoreapp2.1\DownloadModelServiceLibrary.dll
+C:\Users\kunal\source\repos\ImdbClone\DownloadModelServiceLibrary\bin\Debug\netcoreapp2.1\DownloadModelServiceLibrary.pdb
+C:\Users\kunal\source\repos\ImdbClone\DownloadModelServiceLibrary\obj\Debug\netcoreapp2.1\DownloadModelServiceLibrary.csprojAssemblyReference.cache
+C:\Users\kunal\source\repos\ImdbClone\DownloadModelServiceLibrary\obj\Debug\netcoreapp2.1\DownloadModelServiceLibrary.csproj.CoreCompileInputs.cache
+C:\Users\kunal\source\repos\ImdbClone\DownloadModelServiceLibrary\obj\Debug\netcoreapp2.1\DownloadModelServiceLibrary.AssemblyInfoInputs.cache
+C:\Users\kunal\source\repos\ImdbClone\DownloadModelServiceLibrary\obj\Debug\netcoreapp2.1\DownloadModelServiceLibrary.AssemblyInfo.cs
+C:\Users\kunal\source\repos\ImdbClone\DownloadModelServiceLibrary\obj\Debug\netcoreapp2.1\DownloadModelServiceLibrary.dll
+C:\Users\kunal\source\repos\ImdbClone\DownloadModelServiceLibrary\obj\Debug\netcoreapp2.1\DownloadModelServiceLibrary.pdb
