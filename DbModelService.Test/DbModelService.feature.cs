@@ -89,16 +89,13 @@ namespace DbModelService.Test
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 8
- testRunner.Given("I have movie Id 6, Name \"ABCD6\", Year of Release 2006, Plot \"Simple Story6\", Acto" +
-                    "rs \"A6\", Producer \"PP6\", ActorsId \"6\", ProducerId 6", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given(@"I have movie Id 6, Name ""Uri: The Surgical Strike"", Year of Release 2019, Plot ""Uri chronicles the events of the surgical strike conducted by the Indian military against the suspected militants in Pakistan occupied Kashmir (PoK). It tells the story of the 11 tumultuous events over which the operation was carried out."", Actors ""Vicky Kaushal,Paresh Rawal,Yami Gautam"", Producer ""Ronnie Screwvala"", ActorsId ""6 7 8"", ProducerId 6", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 9
  testRunner.When("I press AddMovie", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 10
  testRunner.Then("If Id present throw ThisIdAlreadyExist exception", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 11
  testRunner.And("Do Name Validation", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 12
- testRunner.And("Check for DataDuplicacy", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 13
  testRunner.And("I must save this to IMDBDb Database", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
@@ -146,11 +143,13 @@ this.ScenarioInitialize(scenarioInfo);
                         "PP5"});
             table1.AddRow(new string[] {
                         "6",
-                        "ABCD6",
-                        "2006",
-                        "Simple Story6",
-                        "A6",
-                        "PP6"});
+                        "Uri: The Surgical Strike",
+                        "2019",
+                        "Uri chronicles the events of the surgical strike conducted by the Indian military" +
+                            " against the suspected militants in Pakistan occupied Kashmir (PoK). It tells th" +
+                            "e story of the 11 tumultuous events over which the operation was carried out.",
+                        "Vicky Kaushal,Paresh Rawal,Yami Gautam",
+                        "Ronnie Screwvala"});
 #line 14
  testRunner.And("the List of movies is like:", ((string)(null)), table1, "And ");
 #line hidden
@@ -234,16 +233,16 @@ this.ScenarioInitialize(scenarioInfo);
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Delete a Movie", null, new string[] {
                         "deleteMovie"});
-#line 43
+#line 42
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 44
+#line 43
  testRunner.Given("I have movie Id 5", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 45
+#line 44
  testRunner.When("I press DeleteMovie", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 46
+#line 45
  testRunner.Then("If Id is not present throw ThisIdNotFound exception", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 47
+#line 46
  testRunner.And("Delete movie data from IMDBDb Database", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
@@ -281,7 +280,7 @@ this.ScenarioInitialize(scenarioInfo);
                         "Simple Story4",
                         "A4",
                         "PP4"});
-#line 48
+#line 47
  testRunner.And("the List of movies is like:", ((string)(null)), table3, "And ");
 #line hidden
             this.ScenarioCleanup();

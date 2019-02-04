@@ -5,20 +5,20 @@
 
 @addMovie
 Scenario: Add a Movie
-	Given I have movie Id 6, Name "ABCD6", Year of Release 2006, Plot "Simple Story6", Actors "A6", Producer "PP6", ActorsId "6", ProducerId 6
+	Given I have movie Id 6, Name "Uri: The Surgical Strike", Year of Release 2019, Plot "Uri chronicles the events of the surgical strike conducted by the Indian military against the suspected militants in Pakistan occupied Kashmir (PoK). It tells the story of the 11 tumultuous events over which the operation was carried out.", Actors "Vicky Kaushal,Paresh Rawal,Yami Gautam", Producer "Ronnie Screwvala", ActorsId "6 7 8", ProducerId 6
 	When I press AddMovie
 	Then If Id present throw ThisIdAlreadyExist exception
 	And Do Name Validation
-	And Check for DataDuplicacy
+	#And Check for DataDuplicacy
 	And I must save this to IMDBDb Database
 	And the List of movies is like:
-	| Movie Id | Movie Name | YoR  | Plot          | Actors | Producer |
-	| 1        | ABCD1      | 2001 | Simple Story1 | A1     | PP1      |
-	| 2        | ABCD2      | 2002 | Simple Story2 | A2     | PP2      |
-	| 3        | ABCD3      | 2003 | Simple Story3 | A3     | PP3      |
-	| 4        | ABCD4      | 2004 | Simple Story4 | A4     | PP4      |
-	| 5        | ABCD5      | 2005 | Simple Story5 | A5     | PP5      |
-	| 6        | ABCD6      | 2006 | Simple Story6 | A6     | PP6      |
+	| Movie Id | Movie Name               | YoR  | Plot                                                                                                                                                                                                                                           | Actors                                 | Producer         |
+	| 1        | ABCD1                    | 2001 | Simple Story1                                                                                                                                                                                                                                  | A1                                     | PP1              |
+	| 2        | ABCD2                    | 2002 | Simple Story2                                                                                                                                                                                                                                  | A2                                     | PP2              |
+	| 3        | ABCD3                    | 2003 | Simple Story3                                                                                                                                                                                                                                  | A3                                     | PP3              |
+	| 4        | ABCD4                    | 2004 | Simple Story4                                                                                                                                                                                                                                  | A4                                     | PP4              |
+	| 5        | ABCD5                    | 2005 | Simple Story5                                                                                                                                                                                                                                  | A5                                     | PP5              |
+	| 6        | Uri: The Surgical Strike | 2019 | Uri chronicles the events of the surgical strike conducted by the Indian military against the suspected militants in Pakistan occupied Kashmir (PoK). It tells the story of the 11 tumultuous events over which the operation was carried out. | Vicky Kaushal,Paresh Rawal,Yami Gautam | Ronnie Screwvala |
 
 
 
@@ -35,7 +35,6 @@ Scenario: Update a Movie
 	| 3        | ABCD3      | 2003 | Simple Story3  | A3     | PP3      |
 	| 4        | ABCD4      | 2004 | Simple Story4  | A4     | PP4      |
 	| 5        | ABCD55     | 2055 | Simple Story55 | A5,A7  | PP55     |
-	#| 6        | ABCD6      | 2006 | Simple Story6  | A6     | PP6      |
 
 
 
@@ -51,7 +50,6 @@ Scenario: Delete a Movie
 	| 2        | ABCD2      | 2002 | Simple Story2 | A2     | PP2      |
 	| 3        | ABCD3      | 2003 | Simple Story3 | A3     | PP3      |
 	| 4        | ABCD4      | 2004 | Simple Story4 | A4     | PP4      |
-	#| 5        | ABCD6      | 2006 | Simple Story6 | A6     | PP6      |
 
 
 

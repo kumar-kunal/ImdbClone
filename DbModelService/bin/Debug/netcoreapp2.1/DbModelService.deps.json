@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "a6682f5a43ad5b1d5fa331321fd157712e5ab28f"
+    "signature": "6b35b69725faa5883ff972b7d514562c5fb178cb"
   },
   "compilationOptions": {},
   "targets": {
@@ -9,7 +9,8 @@
       "DbModelService/1.0.0": {
         "dependencies": {
           "AutoMapper": "8.0.0",
-          "DbModelClass": "1.0.0"
+          "DbModelClass": "1.0.0",
+          "Unity": "5.9.3"
         },
         "runtime": {
           "DbModelService.dll": {}
@@ -64,6 +65,14 @@
         }
       },
       "System.Runtime/4.3.0": {},
+      "System.Runtime.CompilerServices.Unsafe/4.5.0": {
+        "runtime": {
+          "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll": {
+            "assemblyVersion": "4.0.4.0",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
       "System.Text.Encoding/4.3.0": {
         "dependencies": {
           "System.Runtime": "4.3.0"
@@ -74,7 +83,27 @@
           "System.Runtime": "4.3.0"
         }
       },
+      "System.ValueTuple/4.5.0": {},
+      "Unity/5.9.3": {
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "4.5.0",
+          "System.ValueTuple": "4.5.0"
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/Unity.Abstractions.dll": {
+            "assemblyVersion": "4.0.2.0",
+            "fileVersion": "4.0.2.0"
+          },
+          "lib/netcoreapp2.0/Unity.Container.dll": {
+            "assemblyVersion": "5.9.3.0",
+            "fileVersion": "5.9.3.0"
+          }
+        }
+      },
       "DbModelClass/1.0.0": {
+        "dependencies": {
+          "Unity": "5.9.3"
+        },
         "runtime": {
           "DbModelClass.dll": {}
         }
@@ -143,6 +172,13 @@
       "path": "system.runtime/4.3.0",
       "hashPath": "system.runtime.4.3.0.nupkg.sha512"
     },
+    "System.Runtime.CompilerServices.Unsafe/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6zBxkHYemB0kQiHP3vGXGRXejZVoNVuMn2paUuqKKi5Wyjkxfkp+D0rd0c3VrGwotidRINt6KpOi2smL4VkJKw==",
+      "path": "system.runtime.compilerservices.unsafe/4.5.0",
+      "hashPath": "system.runtime.compilerservices.unsafe.4.5.0.nupkg.sha512"
+    },
     "System.Text.Encoding/4.3.0": {
       "type": "package",
       "serviceable": true,
@@ -156,6 +192,20 @@
       "sha512": "sha512-jLBpVdK/VFjHg7IuExuuIfKBEkTykT0t1nu3J7TIDPumYo4JFVkZ9vkKfsQwwbbd19vdysOkFtRn1ObJ1Rm58A==",
       "path": "system.threading.tasks/4.3.0",
       "hashPath": "system.threading.tasks.4.3.0.nupkg.sha512"
+    },
+    "System.ValueTuple/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xZtSZNEHGa+tGsKuP4sh257vxJ/yemShz4EusmomkynMzuEDDjVaErBNewpzEF6swUgbcrSQAX3ELsEp1zCOwA==",
+      "path": "system.valuetuple/4.5.0",
+      "hashPath": "system.valuetuple.4.5.0.nupkg.sha512"
+    },
+    "Unity/5.9.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-KdwNNLE4dmTAUV1PtUHI6V9LL8P4R2d4YK8+qxyzTLiItiST43l9O99ajUmEVK91FITVxzsMrlaA7sA7luz58g==",
+      "path": "unity/5.9.3",
+      "hashPath": "unity.5.9.3.nupkg.sha512"
     },
     "DbModelClass/1.0.0": {
       "type": "project",

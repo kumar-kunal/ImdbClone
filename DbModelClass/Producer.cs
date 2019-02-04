@@ -16,9 +16,9 @@ namespace DbModelClass
 
 
         // Implementation of IPerson inteface methods
-        public string Name { get; set; }
-        public DateTime DOB { get; set; }
-        public string Sex { get; set; }
-        public string Bio { get; set; }
+        public string name { get; set; }
+        public DateTime dob { get; set; }
+        public string sex { get; set; }
+        public string bio { get; set; }
     }
 }

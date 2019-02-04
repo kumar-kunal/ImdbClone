@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace DbModelClass
 {
-    interface IPerson
+    public interface IPerson
     {
-        string Name { get; set; }
-        DateTime DOB { get; set; }
-        string Sex { get; set; }
-        string Bio { get; set; }
+        string name { get; set; }
+        DateTime dob { get; set; }
+        string sex { get; set; }
+        string bio { get; set; }
     }
 }

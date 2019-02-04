@@ -8,19 +8,19 @@ namespace DbModelClass
 {
     public class Actor : IPerson
     {
-        public int ActorId { get; set; }
-        public List<Movie> ListOfMoviesActorWorkedIn { get; set; }
+        public int actorId { get; set; }
+        public List<Movie> listOfMoviesActorWorkedIn { get; set; }
 
         public Actor()
         {
-            ListOfMoviesActorWorkedIn = new List<Movie>();
+            listOfMoviesActorWorkedIn = new List<Movie>();
         }
 
         // Implementation of Person Interface
-        public string Name { get; set; }
-        public DateTime DOB { get; set; }
-        public string Sex { get; set; }
-        public string Bio { get; set; }
+        public string name { get; set; }
+        public DateTime dob { get; set; }
+        public string sex { get; set; }
+        public string bio { get; set; }
 
 
 

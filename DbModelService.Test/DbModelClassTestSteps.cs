@@ -1,7 +1,9 @@
-﻿using DbModelClass;
+﻿using AutoMapper;
+using DbModelClass;
 using System;
 using System.Collections.Generic;
 using TechTalk.SpecFlow;
+using TechTalk.SpecFlow.Assist;
 using Xunit;
 
 namespace DbModelService.Test
@@ -12,18 +14,15 @@ namespace DbModelService.Test
 
         TestParameterClass testParameterClass;
 
-        AddMovie addMovie;
+        Movie movieForCRUD;
 
         DataCollectionClass dataCollectionClass;
-
-        NameIdValidation nameIdValidation;
 
         // Constructor to initialize object
         public DbModelClassTestSteps()
         {
             testParameterClass = new TestParameterClass();
-            addMovie = new AddMovie();
-            nameIdValidation = new NameIdValidation();
+            movieForCRUD = new Movie();
             dataCollectionClass = new DataCollectionClass();
         }
 
@@ -58,66 +57,86 @@ namespace DbModelService.Test
         [When(@"I press AddMovie")]
         public void WhenIPressAddMovie()
         {
-            addMovie.AddNewMovieIfAllGiven(testParameterClass);
+            //addMovie.AddNewMovieIfAllGiven(testParameterClass);
+            var config = new MapperConfiguration(cfg => {
+                cfg.CreateMap<TestParameterClass, Movie>();
+            });
+
+            IMapper mapper = config.CreateMapper();
+            movieForCRUD = mapper.Map<TestParameterClass, Movie>(testParameterClass);
         }
         
         [When(@"I press UpdateMovie")]
         public void WhenIPressUpdateMovie()
         {
-            // i will do nothing here... aage dekhte hain.
+            var config = new MapperConfiguration(cfg => {
+                cfg.CreateMap<TestParameterClass, Movie>();
+            });
+
+            IMapper mapper = config.CreateMapper();
+            movieForCRUD = mapper.Map<TestParameterClass, Movie>(testParameterClass);
         }
         
         [When(@"I press DeleteMovie")]
         public void WhenIPressDeleteMovie()
         {
-            // Isko Bhi aage dekhnge...
+            // function has just one line in remove db part
         }
         
         [Then(@"If Id present throw ThisIdAlreadyExist exception")]
         public void ThenIfIdPresentThrowThisIdAlreadyExistException()
         {
-           // try
-            //{
-           nameIdValidation.CheckForExistingId(testParameterClass.MovieId);
-           // }
-           // catch (CustomException ex) { Console.WriteLine(ex.Message); }
+           try
+            {
+           dataCollectionClass.CheckForExistingId(testParameterClass.MovieId);
+           }
+           catch (CustomException ex) { Assert.Equal("Success",ex.Message); }
         }
         
         [Then(@"Do Name Validation")]
         public void ThenDoNameValidation()
         {
-            //try
-            //{
-            nameIdValidation.IsValidName(testParameterClass.MovieName);
-            //}
-            //catch (CustomException ex) { Console.WriteLine(ex.Message); }
+            try
+            {
+            dataCollectionClass.IsValidName(testParameterClass.MovieName);
+            }
+            catch (CustomException ex) { Assert.Equal("Success",ex.Message); }
         }
         
-        [Then(@"Check for DataDuplicacy")]
-        public void ThenCheckForDataDuplicacy()
-        {
-            // see u later
-        }
+        //[Then(@"Check for DataDuplicacy")]
+        //public void ThenCheckForDataDuplicacy()
+        //{
+        //    // see u later
+        //}
         
         [Then(@"I must save this to IMDBDb Database")]
         public void ThenIMustSaveThisToIMDBDbDatabase()
         {
-            dataCollectionClass.SaveNewMovie(addMovie.MovieObjectForAdding);
+            dataCollectionClass.SaveNewMovie(movieForCRUD);
         }
         
         [Then(@"the List of movies is like:")]
         public void ThenTheListOfMoviesIsLike(Table table)
         {
-            // need different code here... this is just for debugging
-            for (int i=0;i<table.Rows.Count;i++)
+            //List<DTOforMovieAndTableCompare> dto = new List<DTOforMovieAndTableCompare>();
+            //dto = dataCollectionClass.moviesCollection;
+
+            //var person = table.CreateInstance<DataCollectionClass>();
+            //table.CompareToInstance<DataCollectionClass>(person);
+
+            ////Assert.Equal(p, dataCollectionClass.moviesCollection);
+
+
+            //need different code here... this is just for debugging
+            for (int i = 0; i < table.Rows.Count; i++)
             {
                 // string i= rows["Movie Name"];
                 Assert.StrictEqual<int>(Int32.Parse(table.Rows[i]["Movie Id"]), dataCollectionClass.moviesCollection[i].MovieId);
                 Assert.Equal(table.Rows[i]["Movie Name"], dataCollectionClass.moviesCollection[i].MovieName);
                 Assert.StrictEqual<int>(Int32.Parse(table.Rows[i]["YoR"]), dataCollectionClass.moviesCollection[i].YearOfRelease);
                 Assert.Equal(table.Rows[i]["Plot"], dataCollectionClass.moviesCollection[i].Plot);
-                Assert.Equal(table.Rows[i]["Actors"], String.Join(",",dataCollectionClass.moviesCollection[i].ActorsNameList));
-                Assert.Equal(table.Rows[i]["Producer"],dataCollectionClass.moviesCollection[i].ProducerNameOfMovie);
+                Assert.Equal(table.Rows[i]["Actors"], String.Join(",", dataCollectionClass.moviesCollection[i].ActorsNameList));
+                Assert.Equal(table.Rows[i]["Producer"], dataCollectionClass.moviesCollection[i].ProducerNameOfMovie);
 
 
             }
@@ -126,13 +145,18 @@ namespace DbModelService.Test
         [Then(@"If Id is not present throw ThisIdNotFound exception")]
         public void ThenIfIdIsNotPresentThrowThisIdNotFoundException()
         {
-            nameIdValidation.CheckIfIdNotExist(testParameterClass.MovieId);
+            try
+            {
+                dataCollectionClass.CheckIfIdNotExist(testParameterClass.MovieId);
+            }
+            catch (CustomException ex) { Assert.Equal("Success", ex.Message); }
+            
         }
         
         [Then(@"Update this to IMDBDb Database")]
         public void ThenUpdateThisToIMDBDbDatabase()
         {
-            dataCollectionClass.UpdateMovie(testParameterClass);      
+            dataCollectionClass.UpdateMovie(movieForCRUD);      
         }
         
         [Then(@"Delete movie data from IMDBDb Database")]
